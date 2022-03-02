@@ -1,0 +1,29 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: antiquewhite;
+    flex-direction: column;
+}
+
+h1, p {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input {
+    margin: 5px;
+}
+
+form {
+    height: 99%;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.btn-container {
+    text-align: center;
+    margin: 5px;
+}
+
+.submit {
+    padding: 8px 18px;
+}
