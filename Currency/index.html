@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Курс валюты</title>
+    <style>
+        body {
+            background: black;
+            height: 50%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .container {
+            border-style: solid;
+            border-color: #814de5;
+            border-radius: 20px;
+            text-align: center;
+            margin: 0 auto;
+            width: 35%;
+            color: #d6c5f7;
+        }
+        select {
+            width: 20%;
+            height: 35px;
+            background-color: #f3eefc;
+            border-radius: 20px;
+            text-align: center;
+            color: #692be0;
+            border-color: #814de5;
+        }
+    </style>
+
+    <script src="./Request.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>КУРС ВАЛЮТЫ</h1>
+        <select class="coins" onchange="sendRequest(event)">
+            <option value="AUD">AUD</option>
+            <option value="AZN">AZN</option>
+            <option value="GBP">GBP</option>
+            <option value="AMD">AMD</option>
+            <option value="BYN">BYN</option>
+            <option value="BGN">BGN</option>
+            <option value="EUR">EUR</option>
+            <option value="USD">USD</option>
+        </select>
+
+        <h2 class="value" id="currency_value">...</h2>
+    </div>
+</body>
+</html>
