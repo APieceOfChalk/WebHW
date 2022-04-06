@@ -1,0 +1,77 @@
+body {
+    font-family: 'Palatino Linotype', serif;
+    background-color: white;
+    padding: 0px 30px;
+    height: 99%;
+    width: 60%;
+    margin: 0 auto;
+}
+
+h1, p {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    margin-bottom: 0px;
+}
+
+
+.btn-container {
+    text-align: center;
+    margin: 5px;
+}
+
+.submit {
+    padding: 8px 18px;
+}
+
+textarea:required:invalid, input:required:invalid {
+    background-color: lightyellow;
+}
+
+fieldset {
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+legend {
+    padding: 0px 3px;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+label {
+    width: 280px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 6px;
+}
+
+em {
+    font-weight: bold;
+    font-style: normal;
+    color: brown;
+}
+
+input:focus {
+    background: #eaeaea;
+}
+
+input, textarea {
+    width: 269px;
+}
+
+textarea {
+    height: 100px;
+}
+
+select {
+    width: 277px;
+}
+
+input[type=checkbox] {
+    width: 10px;
+    transform: scale(1.5);
+}
+
+input[type=date] {
+    width: 272px;
+}
