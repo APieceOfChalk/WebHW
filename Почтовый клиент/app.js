@@ -4,7 +4,9 @@ const http = require('http').Server(app);
 const io = require('socket.io')(http);
 const nodemailer = require('nodemailer');
 
-const port = 3000
+const config = require('./config.json');
+
+const port = 3000;
 
 io.on('connection', function (socket){
 console.log('Клиент подключен');
@@ -13,19 +15,21 @@ socket.on('evenClient', function(data){
     console.log('Сообщение от клиента: ' + data.message);
     console.log("Получатель: "+ data.recipient);
 
-    // var transporter = nodemailer.createTransport({
-    //     host: 'smtp.gmail.com',
-    //     port: 465,
-    //     secure: true, 
-    //     auth: config
-    // })
-    // var result = transporter.sendMail({
-    //     from: config.mail,
-    //     to: data.recipient,
-    //     subject: "Test", 
-    //     text: data.message,
-    //     html: data.message
-    // })
+
+    var transporter = nodemailer.createTransport({
+        host: 'smtp.gmail.com',
+        port: 465,
+        secure: true, 
+        auth: config
+    })
+
+    var result = transporter.sendMail({
+        from: config.mail,
+        to: data.recipient,
+        subject: "Test", 
+        text: data.message,
+        html: data.message
+    })
 });
 });
 
